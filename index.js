@@ -92,29 +92,24 @@ client.on("messageCreate", (message) => {
     message.channel.send({ embeds: [embed] });
   }
 
-  // Links Command
-  else if (command === "links") {
-    const embed = new EmbedBuilder()
-      .setColor(0x00aaff)
-      .setTitle("🔗 Useful Links")
-      .setDescription("Here are some important links:")
-      .addFields(
-        {
-          name: "Website",
-          value: "[Visit](https://example.com)",
-          inline: true,
-        },
-        {
-          name: "Invite",
-          value: "[Join](https://discord.gg/example)",
-          inline: true,
-        },
-      )
-      .setTimestamp();
+// Links Command - Edit this part easily
+    else if (command === 'links') {
+        const embed = new EmbedBuilder()
+            .setColor(0x00aaff)
+            .setTitle('🔗 Useful Links')
+            .setDescription('Here are some important links for our server:')
+            .addFields(
+                { name: '🌐 Website', value: '[Visit Website](https://asumito.com)', inline: true },
+                { name: '📜 Rules', value: '[Read Rules](https://discord.com/channels/947489674321072159/1508112729016238081/1508114818882601012)', inline: true },
+                { name: '🎟️ Invite', value: '[Invite Friends](https://discord.gg/BanzrfJ6Dw)', inline: true },
+                { name: '📺 YouTube', value: '[Subscribe](https://youtube.com/@asumito)', inline: true },
+                { name: '📸 Instagram', value: '[Follow](https://instagram.com/madokashokti)', inline: true }
+            )
+            .setFooter({ text: 'Thank you for being part of our community!' })
+            .setTimestamp();
 
-    message.channel.send({ embeds: [embed] });
-  }
-
+        message.channel.send({ embeds: [embed] });
+    }
   // Set Welcome Channel Command
   else if (command === "setwelcome") {
     if (
