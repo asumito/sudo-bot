@@ -1,1 +1,2 @@
-# welcomer-bot-vide-coded
+# sudo-bot
+moved to [gitlab](https://gitlab.com/asumito/sudo-bot)
